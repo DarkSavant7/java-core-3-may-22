@@ -1,5 +1,10 @@
 package ru.gb.java_core_3.l1_generics;
 
+import java.io.Serializable;
+import java.util.concurrent.Callable;
+
+// Producer Extends Consumer Super
+//public class BoxWithNumbers<N extends Number & Callable & Serializable> {
 public class BoxWithNumbers<N extends Number> {
     private N[] numbers;
 
@@ -7,7 +12,7 @@ public class BoxWithNumbers<N extends Number> {
         this.numbers = numbers;
     }
 
-//    public boolean equalsByAvg(BoxWithNumbers<? extends Number> another) {
+//    public boolean equalsByAvg(BoxWithNumbers<? extends Number> another) {}
     public boolean equalsByAvg(BoxWithNumbers<?> another) {
         return Math.abs(avg() - another.avg()) < 0.00001;
     }
