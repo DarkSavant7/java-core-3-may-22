@@ -1,25 +1,28 @@
 package ru.gb.java_core_3.l1_generics;
 
 //T (ype) E(lement) K(ey) V(alue)
-//public class GenericBox<X, Y, Z> {
-public class GenericBox<X> {
-//    private static X staticField;
-    private X obj;
+//public class GenericBox<TYPE, Y, Z> {
+public class GenericBox<TYPE> {
+//    private static TYPE staticField;
+    private TYPE obj;
+//    private Y yObj;
+//    private Z zObj;
 
-    public GenericBox(X obj) {
+    public GenericBox(TYPE obj) {
         this.obj = obj;
     }
 
     public GenericBox() {
-//        obj = new X();
-//        X[] arr = new X[10];
+//        obj = new TYPE();
+//        TYPE[] arr = new TYPE[10];
+//        TYPE[] arr = (TYPE[])new Object[10];
     }
 
-    public X getObj() {
+    public TYPE getObj() {
         return obj;
     }
 
-    public void setObj(X obj) {
+    public void setObj(TYPE obj) {
         this.obj = obj;
     }
 
